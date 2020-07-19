@@ -1,0 +1,15 @@
+{
+  "name": "TypeScript Node.js Sample",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+	"dbaeumer.vscode-eslint"
+],
+  "forwardPorts": [
+    3000
+  ],
+  "postCreateCommand": "yarn install",
+  "remoteUser": "node"
+}
