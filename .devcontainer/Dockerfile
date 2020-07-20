@@ -1,5 +1,5 @@
 # ref: https://github.com/microsoft/vscode-dev-containers/blob/master/containers/typescript-node/.devcontainer/base.Dockerfile
-# Update the VARIANT arg in devcontainer.json to pick a Node.js version: 14, 12, 10 
+# Update the VARIANT arg in devcontainer.json to pick a Node.js version: 14, 12, 10
 ARG VARIANT=14
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:${VARIANT}
 
@@ -14,3 +14,6 @@ RUN if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then \
         && chmod -R $USER_UID:$USER_GID /home/$USERNAME \
         && chmod -R $USER_UID:root /usr/local/share/nvm /usr/local/share/npm-global; \
     fi
+
+# Install ts-node, typescript. eslint is installed by javascript image
+RUN sudo -u ${USERNAME} yarn global add ts-node typescript
