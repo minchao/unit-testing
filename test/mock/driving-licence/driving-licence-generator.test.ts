@@ -57,7 +57,7 @@ describe('Driving Licence', () => {
     expect('duplicate application user: 123').toEqual(logger.warnLastMessage);
   });
 
-  it('testLicenceNumberAreAtleast15Characters', () => {
+  it('testLicenceNumberAreAtLeast15Characters', () => {
     const applicant1: ILicenceApplicant = new ValidApplicant('M');
     const applicant2: ILicenceApplicant = new ValidApplicant('MD');
     const applicant3: ILicenceApplicant = new ValidApplicant('MDBF');
