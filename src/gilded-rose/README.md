@@ -20,6 +20,18 @@
 
 請幫既有程式碼補上數個單元測試，並觀察測試覆蓋率的變化。
 
+先來整理已知的規則：
+
+ - 每天結束時系統都會降低商品的 `sellIn` 與 `quality` 值。
+ - 一但商品超過 `sellIn` 天數後還沒賣出，`quality` 下降的速度就會快兩倍。
+ - 商品的 `quality` 永遠不為負值。
+ - 商品 `Aged Brie` 的 `quality` 每天都會提高，但 `quality` 永遠不超過 50。
+ - 商品 `Backstage passes to a TAFKAL80ETC concert` 的 `quality` 也是每天都會提高，但是
+   - `sellIn` 少於等於 10 天時，`quality` 每天會提高 2。
+   - `sellIn` 少於等於 5 天時，`quality` 會提高 3。
+   - 音樂會結束後（`sellIn` < 0）`quality` 會下降到 0
+ - 商品 `Sulfuras, Hand of Ragnaros` 是一項傳奇產品，無需出售或降低價值。
+
 單元測試程式碼：
 
 [test/gilded-rose/gilded-rose.test.ts](../../test/gilded-rose/gilded-rose.test.ts)
@@ -39,3 +51,4 @@ coverage/lcov-report/src/gilded-rose/gilded-rose.ts.html
 ## 參考
 
 - https://github.com/emilybache/GildedRose-Refactoring-Kata
+- [Jest Expect Doc](https://jestjs.io/docs/en/expect)
