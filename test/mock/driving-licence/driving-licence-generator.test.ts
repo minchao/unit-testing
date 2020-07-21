@@ -1,11 +1,11 @@
-import { DrivingLicenceGenerator } from '../../../src/mock/driving-licence/DrivingLicenceGenerator';
-import { ILicenceApplicant } from '../../../src/mock/driving-licence/ILicenceApplicant';
-import { InvalidDriverException } from '../../../src/mock/driving-licence/InvalidDriverException';
-import { LicenceHolderApplicant } from './LicenceHolderApplicant';
-import { MockRandomNumbersGenerator } from './MockRandomNumbersGenertaor';
-import { SpyLogger } from './SpyLogger';
-import { UnderAgeApplicant } from './UnderAgeApplicant';
-import { ValidApplicant } from './ValidApplicant';
+import { DrivingLicenceGenerator } from '../../../src/mock/driving-licence/driving-licence-generator';
+import { InvalidDriverException } from '../../../src/mock/driving-licence/invalid-driver-exception';
+import { ILicenceApplicant } from '../../../src/mock/driving-licence/licence-applicant';
+import { LicenceHolderApplicant } from './licence-holder-applicant';
+import { MockRandomNumbersGenerator } from './mock-random-numbers-genertaor';
+import { SpyLogger } from './spy-logger';
+import { UnderAgeApplicant } from './under-age-applicant';
+import { ValidApplicant } from './valid-applicant';
 
 describe('Driving Licence', () => {
   let logger: SpyLogger;
@@ -45,7 +45,7 @@ describe('Driving Licence', () => {
     expect(() => { generator.generateNumber(applicant); }).toThrowError(/Cannot hold more than one licence/);
   });
 
-  it('testLicenceHolderAttemtsLogged ', () => {
+  it('testLicenceHolderAttemptsLogged ', () => {
     const applicant: ILicenceApplicant = new LicenceHolderApplicant();
 
     try {
@@ -57,7 +57,7 @@ describe('Driving Licence', () => {
     expect('duplicate application user: 123').toEqual(logger.warnLastMessage);
   });
 
-  it('testLicenceNumberAreAtleast15Characters', () => {
+  it('testLicenceNumberAreAtLeast15Characters', () => {
     const applicant1: ILicenceApplicant = new ValidApplicant('M');
     const applicant2: ILicenceApplicant = new ValidApplicant('MD');
     const applicant3: ILicenceApplicant = new ValidApplicant('MDBF');
