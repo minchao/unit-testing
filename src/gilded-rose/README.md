@@ -16,10 +16,26 @@
 
 > 題目翻譯，部分參考了 [matt blog](https://mattlee-blog.com/2020/04/05/2020/gildedrose-factoring-kata/) 的譯文。
 
-## GitHub Repo
-
-https://github.com/emilybache/GildedRose-Refactoring-Kata
-
 ## 補上單元測試
 
 請幫既有程式碼補上數個單元測試，並觀察測試覆蓋率的變化。
+
+單元測試程式碼：
+
+[test/gilded-rose/gilded-rose.test.ts](../../test/gilded-rose/gilded-rose.test.ts)
+
+執行單元測試：
+
+```console
+$ yarn run test-gilded-rose
+```
+
+覆蓋率報告路徑：
+
+```
+coverage/lcov-report/src/gilded-rose/gilded-rose.ts.html
+```
+
+## 參考
+
+- https://github.com/emilybache/GildedRose-Refactoring-Kata
