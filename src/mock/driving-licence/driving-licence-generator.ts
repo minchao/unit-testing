@@ -1,8 +1,8 @@
 import dayjs from 'dayjs';
-import { ILicenceApplicant } from './ILicenceApplicant';
-import { ILogger } from './ILogger';
-import { InvalidDriverException } from './InvalidDriverException';
-import { IRandomNumberGenerator } from './IRandomNumberGenerator';
+import { InvalidDriverException } from './invalid-driver-exception';
+import { ILicenceApplicant } from './licence-applicant';
+import { ILogger } from './logger';
+import { IRandomNumberGenerator } from './random-number-generator';
 
 export class DrivingLicenceGenerator {
   private logger: ILogger;

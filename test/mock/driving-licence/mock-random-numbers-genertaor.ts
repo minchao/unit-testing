@@ -1,4 +1,4 @@
-import { IRandomNumberGenerator } from '../../../src/mock/driving-licence/IRandomNumberGenerator';
+import { IRandomNumberGenerator } from '../../../src/mock/driving-licence/random-number-generator';
 
 export class MockRandomNumbersGenerator implements IRandomNumberGenerator {
 

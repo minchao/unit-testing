@@ -1,4 +1,4 @@
-import { ILicenceApplicant } from '../../../src/mock/driving-licence/ILicenceApplicant';
+import { ILicenceApplicant } from '../../../src/mock/driving-licence/licence-applicant';
 
 export class ValidApplicant implements ILicenceApplicant
 {

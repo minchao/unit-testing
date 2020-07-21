@@ -1,12 +1,12 @@
-import { ILicenceApplicant } from '../../../src/mock/driving-licence/ILicenceApplicant';
+import { ILicenceApplicant } from '../../../src/mock/driving-licence/licence-applicant';
 
-export class UnderAgeApplicant implements ILicenceApplicant {
+export class LicenceHolderApplicant implements ILicenceApplicant {
   public getAge(): number {
-    return 16;
+    return 18;
   }
 
   public holdsLicence(): boolean {
-    return false;
+    return true;
   }
 
   public getId(): number {
@@ -18,6 +18,6 @@ export class UnderAgeApplicant implements ILicenceApplicant {
   }
 
   public getInitials(): string {
-    return 'ABC';
+    return 'DEF';
   }
 }

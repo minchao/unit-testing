@@ -1,4 +1,4 @@
-import { ILogger } from '../../../src/mock/driving-licence/ILogger';
+import { ILogger } from '../../../src/mock/driving-licence/logger';
 
 export class SpyLogger implements ILogger {
   public warnCalledCount = 0;
