@@ -32,6 +32,10 @@
    - 音樂會結束後（`sellIn` < 0）`quality` 會下降到 0
  - 商品 `Sulfuras, Hand of Ragnaros` 是一項傳奇產品，無需出售或降低價值。
 
+程式碼：
+
+[src/gilded-rose/gilded-rose.ts](gilded-rose.ts)
+
 單元測試程式碼：
 
 [test/gilded-rose/gilded-rose.test.ts](../../test/gilded-rose/gilded-rose.test.ts)
