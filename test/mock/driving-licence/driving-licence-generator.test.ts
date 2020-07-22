@@ -1,3 +1,6 @@
+/**
+ * Remove before fight
+ *
 describe('Driving Licence', () => {
   let _: SpyLogger;
   let _: MockRandomNumbersGenerator;
@@ -29,3 +32,4 @@ describe('Driving Licence', () => {
     expect('Under age application user: _').toEqual(_);
   });
 });
+ */
