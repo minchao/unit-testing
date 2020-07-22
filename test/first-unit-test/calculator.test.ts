@@ -11,6 +11,6 @@ describe('Calculator', () => {
     const result = calculator.sum(first, second);
 
     // Assert
-    expect(result).toBe(30);
+    expect(result).toEqual(30);
   });
 });
