@@ -1,5 +1,31 @@
 describe('Driving Licence', () => {
-  it('dummy test', () => {
-    expect(1).toEqual(1);
+  let _: SpyLogger;
+  let _: MockRandomNumbersGenerator;
+  let _: DrivingLicenceGenerator;
+
+  beforeEach(() => {
+    _ = new SpyLogger();
+    _ = new MockRandomNumbersGenerator();
+
+    _ = new DrivingLicenceGenerator(_, _);
+  });
+
+  it('testUnderAgeApplicantCannotGenerateLicence', () => {
+    const applicant: ILicenceApplicant = new _();
+
+    expect(() => { _.generateNumber(applicant); }).toThrowError(_);
+    expect(() => { _.generateNumber(applicant); }).toThrowError(_);
+  });
+
+  it('testUnderAgeApplicationsAreLogged', () => {
+    const applicant: ILicenceApplicant = new _();
+
+    try {
+      _.generateNumber(applicant);
+    } catch (error) {
+    }
+
+    expect(1).toEqual(_);
+    expect('Under age application user: _').toEqual(_);
   });
 });
