@@ -26,7 +26,7 @@
 
 單元測試程式碼：
 
-[test/mock/driving-licence/driving-licence-generator.test.ts](../../test/mock/driving-licence/driving-licence-generator.test.ts)
+[test/mock/driving-licence/driving-licence-generator.test.ts](../../../test/mock/driving-licence/driving-licence-generator.test.ts)
 
 執行單元測試：
 
