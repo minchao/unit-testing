@@ -65,7 +65,7 @@ describe('Driving Licence', () => {
     expect('duplicate application user: 123').toEqual(logger.warnLastMessage);
   });
 
-  it('testLicenceNumberAreAtLeast15Characters', () => {
+  it('駕照號碼至少需要 15 個字元', () => {
     const applicant1: ILicenceApplicant = new ValidApplicant('M');
     const applicant2: ILicenceApplicant = new ValidApplicant('MD');
     const applicant3: ILicenceApplicant = new ValidApplicant('MDBF');

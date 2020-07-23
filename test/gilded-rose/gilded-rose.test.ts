@@ -2,7 +2,7 @@ import { Item, GildedRose } from '../../src/gilded-rose';
 
 // ref: https://gist.github.com/adelatorrefoss/ebc658b3e0054913dced80c8fe384de0
 describe('Gilded Rose', () => {
-  it('should foo', () => {
+  it('item name should not be changed', () => {
     // Arrange
     const gildedRose = new GildedRose([new Item('foo', 0, 0)]);
 
