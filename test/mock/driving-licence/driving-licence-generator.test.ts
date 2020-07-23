@@ -35,5 +35,20 @@ describe('Driving Licence', () => {
     expect(1).toEqual(_);
     expect('Under age application user: _').toEqual(_);
   });
+
+  it('testLicenceHolderCannotGenerateLicence', () => {
+  });
+
+  it('testLicenceHolderAttemptsLogged', () => {
+  });
+
+  it('駕照號碼至少需要 15 個字元', () => {
+
+    // fill the missing code
+
+    expect('M11071999012345').toEqual(_);
+    expect('MD1107199901234').toEqual(_);
+    expect('MDBF110719990123').toEqual(_);
+  });
 });
  */
