@@ -32,11 +32,13 @@ xdescribe('Driving Licence', () => {
     // 可以參考 https://jestjs.io/docs/en/expect.html#tothrowerror
   });
 
-  // 請補齊以下測試案例，你需要準備對應的 Stub
+  // 為了補齊以下測試案例，你需要準備對應的 Stub
 
   xit('testLicenceHolderAttemptsLogged ', () => {
+    // 請補齊測試案例
   });
 
   xit('testLicenceHolderCannotGenerateLicence', () => {
+    // 請補齊測試案例
   });
 });
