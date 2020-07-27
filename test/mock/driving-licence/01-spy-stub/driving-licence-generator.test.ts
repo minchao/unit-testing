@@ -1,0 +1,42 @@
+import { DrivingLicenceGenerator } from '../../../../src/mock/driving-licence/driving-licence-generator';
+import { ILicenceApplicant } from '../../../../src/mock/driving-licence/licence-applicant';
+import { MockRandomNumbersGenerator } from './mock-random-numbers-generator';
+import { SpyLogger } from './spy-logger';
+import { UnderAgeApplicant } from './under-age-applicant';
+
+xdescribe('Driving Licence', () => {
+  let logger: SpyLogger;
+  let random: MockRandomNumbersGenerator;
+  let generator: DrivingLicenceGenerator;
+
+  beforeEach(() => {
+    logger = new SpyLogger();
+    random = new MockRandomNumbersGenerator;
+    generator = new DrivingLicenceGenerator(logger, random);
+  });
+
+  it('testUnderAgeApplicationsAreLogged', () => {
+    const applicant: ILicenceApplicant = new UnderAgeApplicant();
+
+    try {
+      generator.generateNumber(applicant);
+    } catch (error) {
+    }
+
+    expect(1).toEqual(logger.warnCalledCount);
+    expect('Under age application user: 123').toEqual(logger.warnLastMessage);
+  });
+
+  xit('testUnderAgeApplicantCannotGenerateLicence', () => {
+    // 嘗試看看 assert 會拋出 Excpetion 的狀況
+    // 可以參考 https://jestjs.io/docs/en/expect.html#tothrowerror
+  });
+
+  // 請補齊以下測試案例，你需要準備對應的 Stub
+
+  xit('testLicenceHolderAttemptsLogged ', () => {
+  });
+
+  xit('testLicenceHolderCannotGenerateLicence', () => {
+  });
+});
