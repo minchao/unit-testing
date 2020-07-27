@@ -9,7 +9,6 @@
     "test": "jest --detectOpenHandles --forceExit --coverage --verbose",
     "test-first-unit-test": "jest --detectOpenHandles --forceExit --coverage --verbose -t 'Calculator'",
     "test-coverage": "jest --detectOpenHandles --forceExit --coverage --verbose -t 'Coverage'",
-    "test-driving-licence": "jest --detectOpenHandles --forceExit --coverage --verbose -t 'Driving Licence'",
     "test-gilded-rose": "jest --detectOpenHandles --forceExit --coverage --verbose -t 'Gilded Rose'"
   },
   "devDependencies": {

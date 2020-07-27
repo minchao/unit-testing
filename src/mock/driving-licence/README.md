@@ -1,5 +1,7 @@
 # 練習
 
+> 若你不想使用 Docker，或 Docker 環境跑不起來，還有 [REPL](https://repl.it/@yaosiang/DrivingLicenceGenerator) 可用喔。
+
 ## 題目
 
 你需要幫一個駕照號碼產生器撰寫測試，而駕照號碼產生是有下列規則的：
@@ -23,19 +25,3 @@
 1. 使用 Stub 來測試不同年齡的應徵者，以及重複的應徵者。
 2. 使用 Spy 來測試 logger 是否被確實呼叫。
 3. 使用 Mock 來模擬產生隨機碼。
-
-單元測試程式碼：
-
-[test/mock/driving-licence/driving-licence-generator.test.ts](../../../test/mock/driving-licence/driving-licence-generator.test.ts)
-
-執行單元測試：
-
-```console
-$ yarn run test-driving-licence
-```
-
-覆蓋率報告路徑：
-
-```
-coverage/lcov-report/src/mock/driving-licence/index.html
-```

@@ -1,5 +1,7 @@
 # Calculator
 
+> 若你不想使用 Docker，或 Docker 環境跑不起來，還有 [REPL](https://repl.it/@yaosiang/Calculator) 可用喔。
+
 我們有個計算器類別叫做 [Calculator](calculator.ts)，它提供一個 Sum 方法，當輸入兩個浮點數後，會輸出浮點數的總和。
 單元測試簡單地示範如何測試這個方法。
 
