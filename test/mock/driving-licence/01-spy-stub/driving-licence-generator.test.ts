@@ -1,4 +1,5 @@
 import { DrivingLicenceGenerator } from '../../../../src/mock/driving-licence/driving-licence-generator';
+import { InvalidDriverException } from '../../../../src/mock/driving-licence/invalid-driver-exception';
 import { ILicenceApplicant } from '../../../../src/mock/driving-licence/licence-applicant';
 import { MockRandomNumbersGenerator } from './mock-random-numbers-generator';
 import { SpyLogger } from './spy-logger';
@@ -28,7 +29,7 @@ xdescribe('Driving Licence', () => {
   });
 
   xit('testUnderAgeApplicantCannotGenerateLicence', () => {
-    // 嘗試看看 assert 會拋出 Excpetion 的狀況
+    // 嘗試看看 assert 會拋出 Exception 的狀況
     // 可以參考 https://jestjs.io/docs/en/expect.html#tothrowerror
   });
 
