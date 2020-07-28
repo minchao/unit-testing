@@ -1,4 +1,4 @@
-import Trip from '../trip/Trip';
+import Trip from '../../trip/Trip';
 
 export class User {
   private trips: Trip[] = [];
@@ -18,5 +18,16 @@ export class User {
 
   public getTrips(): Trip[] {
     return this.trips;
+  }
+
+  public isFriendsWith(loggedUser: User): boolean {
+    let isFriend = false;
+    for (const friend of this.getFriends()) {
+      if (friend === loggedUser) {
+        isFriend = true;
+        break;
+      }
+    }
+    return isFriend;
   }
 }

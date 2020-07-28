@@ -1,14 +1,13 @@
-import UserNotLoggedInException from '../exception/UserNotLoggedInException';
-import { User } from '../user/User';
-import UserSession from '../user/UserSession';
-import Trip from './Trip';
-import TripDAO from './TripDAO';
+import UserNotLoggedInException from '../../exception/UserNotLoggedInException';
+import { User } from '../../user/User';
+import UserSession from '../../user/UserSession';
+import Trip from '../Trip';
+import TripDAO from '../TripDAO';
 
 export default class TripService {
   public getTripsByUser(user: User): Trip[] {
     let tripList: Trip[] = [];
-    // 這裡有個類似全域變數的 UserSession
-    const loggedUser: User = UserSession.getLoggedUser();
+    const loggedUser = this.getLoggedUser();
     let isFriend = false;
 
     if (loggedUser != null) {
@@ -20,7 +19,6 @@ export default class TripService {
       }
 
       if (isFriend) {
-        // 這裡有個 DAO，實際上可能是接 DB 或呼叫 API
         tripList = TripDAO.findTripsByUser(user);
       }
 
@@ -28,5 +26,10 @@ export default class TripService {
     } else {
       throw new UserNotLoggedInException();
     }
+  }
+
+  protected getLoggedUser(): User | null {
+    const loggedUser: User = UserSession.getLoggedUser();
+    return loggedUser;
   }
 }
