@@ -1,8 +1,8 @@
 import { Service } from 'typedi';
-import UserNotLoggedInException from '../../exception/UserNotLoggedInException';
-import { User } from '../../user/refactoring/User01';
-import Trip from '../Trip';
-import TripDAO from './TripDAO02';
+import UserNotLoggedInException from '../../../exception/UserNotLoggedInException';
+import { User } from '../../../user/refactoring/03-remove-trip-dao/User';
+import Trip from '../../Trip';
+import TripDAO from '../03-remove-trip-dao/TripDAO';
 
 @Service()
 export default class TripService {

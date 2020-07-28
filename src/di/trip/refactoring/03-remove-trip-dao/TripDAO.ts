@@ -1,8 +1,8 @@
 import 'reflect-metadata';
 import { Service } from 'typedi';
-import CollaboratorCallException from '../../exception/CollaboratorCallException';
-import { User } from '../../user/refactoring/User01';
-import Trip from '../Trip';
+import CollaboratorCallException from '../../../exception/CollaboratorCallException';
+import { User } from '../../../user/refactoring/03-remove-trip-dao/User';
+import Trip from '../../Trip';
 
 @Service()
 export default class TripDAO {
