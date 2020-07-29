@@ -10,6 +10,7 @@ https://bit.ly/2ZNs3Jj
 - [Coverage](src/coverage)
 - [Gilded Rose](src/gilded-rose)
 - [Driving Licence](src/mock/driving-licence)
+- [Trip Service](src/di)
 
 ## 開發環境
 
