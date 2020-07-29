@@ -1,9 +1,11 @@
 import { DrivingLicenceGenerator } from '../../../../src/mock/driving-licence/driving-licence-generator';
 import { InvalidDriverException } from '../../../../src/mock/driving-licence/invalid-driver-exception';
 import { ILicenceApplicant } from '../../../../src/mock/driving-licence/licence-applicant';
+
 import { MockRandomNumbersGenerator } from './mock-random-numbers-generator';
 import { SpyLogger } from './spy-logger';
 import { UnderAgeApplicant } from './under-age-applicant';
+import { LicenceHolderApplicant } from './licence-holder-applicant';
 
 xdescribe('Driving Licence', () => {
   let logger: SpyLogger;

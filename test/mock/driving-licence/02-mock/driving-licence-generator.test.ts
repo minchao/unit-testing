@@ -13,7 +13,6 @@ xdescribe('Driving Licence', () => {
   beforeEach(() => {
     logger = new SpyLogger();
     random = new MockRandomNumbersGenerator();
-
     generator = new DrivingLicenceGenerator(logger, random);
   });
 
