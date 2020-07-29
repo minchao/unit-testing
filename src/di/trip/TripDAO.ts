@@ -1,5 +1,5 @@
 import CollaboratorCallException from '../exception/CollaboratorCallException';
-import User from '../user/User';
+import { User } from '../user/User';
 import Trip from './Trip';
 
 export default class TripDAO {

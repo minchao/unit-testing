@@ -1,5 +1,5 @@
 import CollaboratorCallException from '../exception/CollaboratorCallException';
-import User from './User';
+import { User } from './User';
 
 class UserSession {
   public getLoggedUser(): User {
