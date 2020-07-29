@@ -8,7 +8,7 @@
 
 這個練習展示了一段糟糕的 Trip Service 程式碼，它沒有任何測試，並具有許多大型 Legacy Code 常見的問題，例如 Singletons，Static calls 和 Feature Envy 等，使它修復起來非常困難。
 
-你的任務是為它添加測試，使其可以安全地進行重構，僅需要關注 TripService 類別，無需測試該類別的依賴。
+你的任務是為它添加測試，使其可以安全地進行重構，僅需要關注 Trip Service 類別，無需測試該類別的依賴。
 
 ## 規則
 
