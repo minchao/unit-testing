@@ -14,7 +14,7 @@ export class DrivingLicenceGenerator {
   }
 
   public generateNumber(applicant: ILicenceApplicant): string {
-    // 只有 18 歲以上成年人才可以領取駕照
+    // 只有 17 歲以上成年人才可以領取駕照
     if (applicant.getAge() < 17) {
       this.logger.warn(`Under age application user: ${applicant.getId()}`);
       throw new InvalidDriverException('Applicant is too young');
