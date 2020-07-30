@@ -39,6 +39,7 @@ describe('Trip Service', () => {
 
   class TestableTripService extends TripService {
 
+    // 其實用不到了
     protected getLoggedUser(): User {
       return guest;
     }
