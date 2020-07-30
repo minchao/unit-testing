@@ -17,9 +17,9 @@ xdescribe('Driving Licence', () => {
   });
 
   it('駕照號碼至少需要 15 個字元', () => {
-    const applicant1: ILicenceApplicant = new ValidApplicant('M');
-    const applicant2: ILicenceApplicant = new ValidApplicant('MD');
-    const applicant3: ILicenceApplicant = new ValidApplicant('MDBF');
+    const applicant1: ILicenceApplicant = new ValidApplicant('M'); // 15-1-8=6
+    const applicant2: ILicenceApplicant = new ValidApplicant('MD'); // 15-2-8=5
+    const applicant3: ILicenceApplicant = new ValidApplicant('MDBF'); // 15-4-8=3, because 3 < 4, therefore 3+1=4
     const randomMap: Map<number, string> = new Map<number, string>();
 
     // fill the missing code
