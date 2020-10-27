@@ -18,24 +18,31 @@ https://bit.ly/2ZNs3Jj
 - 執行環境：[Node.js](https://nodejs.org/)
 - 測試框架：[Jest](https://jestjs.io/)
 
-課程使用 [VS Code Remote Development](https://code.visualstudio.com/docs/remote/remote-overview) 作為開箱即用的練習環境，
-請參考以下說明設定。
+若您的電腦未安裝以上工具，也可參考以下提供的開箱即用練習環境。
+
+### 方案一、Gipod
+
+如果擁有 [Gipod](https://www.gitpod.io/) 帳號，可以按這裡直接開始 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/minchao/unit-testing)
+
+### 方案二、VS Code Remote Development
+
+使用 [VS Code Remote Development](https://code.visualstudio.com/docs/remote/remote-overview)。
 
 > 參考自 https://code.visualstudio.com/docs/remote/containers-tutorial
 
-### 安裝 Docker
+#### 安裝 Docker
 
 https://www.docker.com/products/docker-desktop
 
-### 安裝 VS Code 編輯器
+#### 安裝 VS Code 編輯器
 
 https://code.visualstudio.com/Download
 
-### 安裝 Remote Development Extension
+#### 安裝 Remote Development Extension
 
 https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
 
-### 啟動開發環境
+#### 啟動開發環境
 
 下載課程原始碼：
 
@@ -57,7 +64,7 @@ git clone https://github.com/minchao/unit-testing
 
 ### 檢查開發環境
 
-待容器準備就緒後，您可以透過打開 VS Code 的 Terminal > New Terminal 並輸入以下指令，確定是否一切正常：
+待準備就緒後，您可以在 VS Code 的 Terminal > New Terminal 輸入以下指令，確定是否一切正常：
 
 ```console
 $ node --version; yarn --version; tsc --version
