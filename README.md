@@ -8,7 +8,6 @@ https://bit.ly/2ZNs3Jj
 
 - [Calculator](src/first-unit-test)
 - [Coverage](src/coverage)
-- [Gilded Rose](src/gilded-rose)
 - [Driving Licence](src/mock/driving-licence)
 - [Trip Service](src/di)
 
