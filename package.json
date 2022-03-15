@@ -8,8 +8,7 @@
     "lint-fix": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "test": "jest --detectOpenHandles --forceExit --coverage --verbose",
     "test-first-unit-test": "jest --detectOpenHandles --forceExit --coverage --verbose -t 'Calculator'",
-    "test-coverage": "jest --detectOpenHandles --forceExit --coverage --verbose -t 'Coverage'",
-    "test-gilded-rose": "jest --detectOpenHandles --forceExit --coverage --verbose -t 'Gilded Rose'"
+    "test-coverage": "jest --detectOpenHandles --forceExit --coverage --verbose -t 'Coverage'"
   },
   "devDependencies": {
     "@types/eslint": "^7.2.0",
