@@ -19,9 +19,9 @@ https://bit.ly/2ZNs3Jj
 
 若您的電腦未安裝以上工具，也可參考以下提供的開箱即用練習環境。
 
-### 方案一、Gipod
+### 方案一、Gitpod
 
-如果擁有 [Gipod](https://www.gitpod.io/) 帳號，可以按這裡直接開始 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/minchao/unit-testing)
+如果擁有 [Gitpod](https://www.gitpod.io/) 帳號，可以按這裡直接開始 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/minchao/unit-testing)
 
 ### 方案二、VS Code Remote Development
 
