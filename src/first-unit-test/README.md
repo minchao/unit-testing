@@ -16,7 +16,7 @@
 執行單元測試：
 
 ```console
-$ yarn run test-first-unit-test
+$ npm run test-first-unit-test
 ```
 
 覆蓋率報告路徑：

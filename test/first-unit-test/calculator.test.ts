@@ -1,7 +1,7 @@
 import { Calculator } from '../../src/first-unit-test/calculator';
 
 describe('Calculator', () => {
-  it('Sum of two numbers', () => {
+  it('sum of two numbers', () => {
     // Arrange
     const first = 10;
     const second = 20;
