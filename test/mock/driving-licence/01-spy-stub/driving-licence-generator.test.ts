@@ -7,7 +7,7 @@ import { SpyLogger } from './spy-logger';
 import { UnderAgeApplicant } from './under-age-applicant';
 import { LicenceHolderApplicant } from './licence-holder-applicant';
 
-describe('Driving Licence', () => {
+xdescribe('Driving Licence', () => {
   let logger: SpyLogger;
   let random: MockRandomNumbersGenerator;
   let generator: DrivingLicenceGenerator;
