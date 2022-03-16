@@ -44,23 +44,4 @@ describe('Driving Licence', () => {
   xit('testLicenceHolderAttemptsLogged ', () => {
     // 請補齊測試案例
   });
-
-  xit('駕照號碼至少需要 15 個字元', () => {
-    // const applicant1: ILicenceApplicant = new Stub();
-    // const applicant2: ILicenceApplicant = new Stub();
-    // const applicant3: ILicenceApplicant = new Stub();
-    const randomMap: Map<number, string> = new Map<number, string>();
-
-    // Map(隨機碼長度, 隨機碼數字)
-    random.mockGenerate(
-      randomMap
-        .set(4, '0123')
-        .set(5, '01234')
-        .set(6, '012345')
-    );
-
-    // expect('').toEqual(generator.generateNumber(applicant1));
-    // expect('').toEqual(generator.generateNumber(applicant2));
-    // expect('').toEqual(generator.generateNumber(applicant3));
-  });
 });
