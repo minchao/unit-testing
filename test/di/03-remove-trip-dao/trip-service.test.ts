@@ -14,13 +14,13 @@ describe('Trip Service', () => {
   const otherUser: User = new User();
 
   it('should_Throw_Exception_When_User_Is_Not_LoggedIn', () => {
-    const tripService: TripService = Container.get(TripService);
+    const tripService: TripService = new TripService(new MockTripDAO());
 
     expect(() => { tripService.getTripsByUser(unusedUser, guest); }).toThrowError(UserNotLoggedInException);
   });
 
   it('should_Not_Return_Trips_When_Logged_User_Are_Not_Friend', () => {
-    const tripService: TripService = Container.get(TripService);
+    const tripService: TripService = new TripService(new MockTripDAO());
 
     const friend: User = new User();
     friend.addFriend(otherUser);
@@ -43,7 +43,7 @@ describe('Trip Service', () => {
     expect(tripService.getTripsByUser(friend, registeredUser).length).toEqual(2);
   });
 
-  it('should_Return_Trips_When_Logged_User_Are_Friend (without DI tool)', () => {
+  it('should_Return_Trips_When_Logged_User_Are_Friend', () => {
     const tripService: TripService = new TripService(new MockTripDAO());
 
     const friend: User = new User();
