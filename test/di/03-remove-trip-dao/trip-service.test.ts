@@ -29,10 +29,8 @@ describe('Trip Service', () => {
     expect(tripService.getTripsByUser(friend, registeredUser).length).toEqual(0);
   });
 
-  it('should_Return_Trips_When_Logged_User_Are_Friend (with DI tool)', () => {
-    Container.reset();
-    Container.set(TripDAO, new MockTripDAO());
-    const tripService: TripService = Container.get(TripService);
+  it('should_Return_Trips_When_Logged_User_Are_Friend', () => {
+    const tripService: TripService = new TripService(new MockTripDAO());
 
     const friend: User = new User();
     friend.addFriend(otherUser);
@@ -43,8 +41,10 @@ describe('Trip Service', () => {
     expect(tripService.getTripsByUser(friend, registeredUser).length).toEqual(2);
   });
 
-  it('should_Return_Trips_When_Logged_User_Are_Friend', () => {
-    const tripService: TripService = new TripService(new MockTripDAO());
+  it('should_Return_Trips_When_Logged_User_Are_Friend (with DI tool)', () => {
+    Container.reset();
+    Container.set(TripDAO, new MockTripDAO());
+    const tripService: TripService = Container.get(TripService);
 
     const friend: User = new User();
     friend.addFriend(otherUser);
