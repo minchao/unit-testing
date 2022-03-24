@@ -10,7 +10,7 @@ describe('Trip Service', () => {
 
   const guest: User | null = null;
   const unusedUser: User | null = null;
-  const registeredUser: User = new User();
+  const loggedUser: User = new User();
   const otherUser: User = new User();
 
   it('should_Throw_Exception_When_User_Is_Not_LoggedIn', () => {
@@ -26,7 +26,7 @@ describe('Trip Service', () => {
     aUser.addFriend(otherUser);
     aUser.addTrip(new Trip());
 
-    expect(tripService.getTripsByUser(aUser, registeredUser).length).toEqual(0);
+    expect(tripService.getTripsByUser(aUser, loggedUser).length).toEqual(0);
   });
 
   it('should_Return_Trips_When_Logged_User_Are_Friend', () => {
@@ -34,11 +34,11 @@ describe('Trip Service', () => {
 
     const aUser: User = new User();
     aUser.addFriend(otherUser);
-    aUser.addFriend(registeredUser);
+    aUser.addFriend(loggedUser);
     aUser.addTrip(new Trip());
     aUser.addTrip(new Trip());
 
-    expect(tripService.getTripsByUser(aUser, registeredUser).length).toEqual(2);
+    expect(tripService.getTripsByUser(aUser, loggedUser).length).toEqual(2);
   });
 
   it('should_Return_Trips_When_Logged_User_Are_Friend (with DI tool)', () => {
@@ -48,10 +48,10 @@ describe('Trip Service', () => {
 
     const aUser: User = new User();
     aUser.addFriend(otherUser);
-    aUser.addFriend(registeredUser);
+    aUser.addFriend(loggedUser);
     aUser.addTrip(new Trip());
     aUser.addTrip(new Trip());
 
-    expect(tripService.getTripsByUser(aUser, registeredUser).length).toEqual(2);
+    expect(tripService.getTripsByUser(aUser, loggedUser).length).toEqual(2);
   });
 });
