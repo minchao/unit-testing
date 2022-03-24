@@ -1,7 +1,5 @@
 # 練習
 
-> 若你不想使用 Docker，或 Docker 環境跑不起來，還有 [REPL](https://repl.it/@yaosiang/TripService) 可用喔。
-
 ## 題目
 
 想像一個旅行者的社交網路服務，你需要登入才能看到內容，也必須成為某人的朋友，才能看到他的旅程。

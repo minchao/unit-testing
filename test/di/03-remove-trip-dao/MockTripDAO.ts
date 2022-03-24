@@ -1,6 +1,6 @@
-import TripDAO from '../../../src/di/trip/refactoring/03-remove-trip-dao/TripDAO';
-import Trip from '../../../src/di/trip/Trip';
-import { User } from '../../../src/di/user/refactoring/03-remove-trip-dao/User';
+import TripDAO from '../../../src/di/03-remove-trip-dao/trip/TripDAO';
+import Trip from '../../../src/di/03-remove-trip-dao/trip/Trip';
+import { User } from '../../../src/di/03-remove-trip-dao/user/User';
 
 export class MockTripDAO extends TripDAO {
 

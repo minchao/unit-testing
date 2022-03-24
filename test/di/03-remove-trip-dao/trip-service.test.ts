@@ -1,9 +1,9 @@
 import { Container } from 'typedi';
-import UserNotLoggedInException from '../../../src/di/exception/UserNotLoggedInException';
-import TripDAO from '../../../src/di/trip/refactoring/03-remove-trip-dao/TripDAO';
-import TripService from '../../../src/di/trip/refactoring/03-remove-trip-dao/TripService06';
-import Trip from '../../../src/di/trip/Trip';
-import { User } from '../../../src/di/user/refactoring/03-remove-trip-dao/User';
+import UserNotLoggedInException from '../../../src/di/03-remove-trip-dao/exception/UserNotLoggedInException';
+import TripDAO from '../../../src/di/03-remove-trip-dao/trip/TripDAO';
+import TripService from '../../../src/di/03-remove-trip-dao/trip/TripService06';
+import Trip from '../../../src/di/03-remove-trip-dao/trip/Trip';
+import { User } from '../../../src/di/03-remove-trip-dao/user/User';
 import { MockTripDAO } from './MockTripDAO';
 
 describe('Trip Service', () => {
@@ -22,23 +22,23 @@ describe('Trip Service', () => {
   it('should_Not_Return_Trips_When_Logged_User_Are_Not_Friend', () => {
     const tripService: TripService = new TripService(new MockTripDAO());
 
-    const friend: User = new User();
-    friend.addFriend(otherUser);
-    friend.addTrip(new Trip());
+    const aUser: User = new User();
+    aUser.addFriend(otherUser);
+    aUser.addTrip(new Trip());
 
-    expect(tripService.getTripsByUser(friend, registeredUser).length).toEqual(0);
+    expect(tripService.getTripsByUser(aUser, registeredUser).length).toEqual(0);
   });
 
   it('should_Return_Trips_When_Logged_User_Are_Friend', () => {
     const tripService: TripService = new TripService(new MockTripDAO());
 
-    const friend: User = new User();
-    friend.addFriend(otherUser);
-    friend.addFriend(registeredUser);
-    friend.addTrip(new Trip());
-    friend.addTrip(new Trip());
+    const aUser: User = new User();
+    aUser.addFriend(otherUser);
+    aUser.addFriend(registeredUser);
+    aUser.addTrip(new Trip());
+    aUser.addTrip(new Trip());
 
-    expect(tripService.getTripsByUser(friend, registeredUser).length).toEqual(2);
+    expect(tripService.getTripsByUser(aUser, registeredUser).length).toEqual(2);
   });
 
   it('should_Return_Trips_When_Logged_User_Are_Friend (with DI tool)', () => {
@@ -46,12 +46,12 @@ describe('Trip Service', () => {
     Container.set(TripDAO, new MockTripDAO());
     const tripService: TripService = Container.get(TripService);
 
-    const friend: User = new User();
-    friend.addFriend(otherUser);
-    friend.addFriend(registeredUser);
-    friend.addTrip(new Trip());
-    friend.addTrip(new Trip());
+    const aUser: User = new User();
+    aUser.addFriend(otherUser);
+    aUser.addFriend(registeredUser);
+    aUser.addTrip(new Trip());
+    aUser.addTrip(new Trip());
 
-    expect(tripService.getTripsByUser(friend, registeredUser).length).toEqual(2);
+    expect(tripService.getTripsByUser(aUser, registeredUser).length).toEqual(2);
   });
 });

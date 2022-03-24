@@ -1,5 +1,7 @@
-import UserNotLoggedInException from '../../../src/di/exception/UserNotLoggedInException';
-import TripService from '../../../src/di/trip/TripService';
+import UserNotLoggedInException from '../../../src/di/01-make-it-testable/exception/UserNotLoggedInException';
+import TripService from '../../../src/di/01-make-it-testable/trip/TripService02';
+import { User } from '../../../src/di/01-make-it-testable/user/User';
+import Trip from '../../../src/di/01-make-it-testable/trip/Trip';
 
 describe('Trip Service', () => {
   xit('first attempt', () => {

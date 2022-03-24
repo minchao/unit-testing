@@ -1,13 +1,13 @@
-import UserNotLoggedInException from '../../../exception/UserNotLoggedInException';
-import { User } from '../../../user/User';
-import UserSession from '../../../user/UserSession';
-import Trip from '../../Trip';
-import TripDAO from '../../TripDAO';
+import UserNotLoggedInException from '../exception/UserNotLoggedInException';
+import { User } from '../user/User';
+import UserSession from '../user/UserSession';
+import Trip from './Trip';
+import TripDAO from './TripDAO';
 
 export default class TripService {
   // 把 loggedUser 變成由參數傳遞進來
   public getTripsByUser(user: User, loggedUser: User | null): Trip[] {
-    if (loggedUser == null) {
+    if (loggedUser === null) {
       throw new UserNotLoggedInException();
     }
 

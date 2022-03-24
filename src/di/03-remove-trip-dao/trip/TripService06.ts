@@ -1,8 +1,8 @@
 import { Service } from 'typedi';
-import UserNotLoggedInException from '../../../exception/UserNotLoggedInException';
-import { User } from '../../../user/refactoring/03-remove-trip-dao/User';
-import Trip from '../../Trip';
-import TripDAO from '../03-remove-trip-dao/TripDAO';
+import UserNotLoggedInException from '../exception/UserNotLoggedInException';
+import { User } from '../user/User';
+import Trip from './Trip';
+import TripDAO from './TripDAO';
 
 @Service()
 export default class TripService {
@@ -22,7 +22,7 @@ export default class TripService {
   }
 
   protected validateLoggedUser(loggedUser: User): void {
-    if (loggedUser == null) {
+    if (loggedUser === null) {
       throw new UserNotLoggedInException();
     }
   }
