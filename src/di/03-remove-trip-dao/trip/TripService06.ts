@@ -13,7 +13,7 @@ export default class TripService {
     this.tripDao = tripDao;
   }
 
-  public getTripsByUser(user: User, loggedUser: User | null): Trip[] {
+  public getTripsByUser(user: User, loggedUser: User): Trip[] {
     this.validateLoggedUser(loggedUser);
 
     return user.isFriendsWith(loggedUser)

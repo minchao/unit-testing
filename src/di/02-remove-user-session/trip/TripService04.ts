@@ -6,7 +6,7 @@ import TripDAO from './TripDAO';
 
 export default class TripService {
   // 把 loggedUser 變成由參數傳遞進來
-  public getTripsByUser(user: User, loggedUser: User | null): Trip[] {
+  public getTripsByUser(user: User, loggedUser: User): Trip[] {
     if (loggedUser === null) {
       throw new UserNotLoggedInException();
     }

@@ -4,7 +4,7 @@ import Trip from './Trip';
 import TripDAO from './TripDAO';
 
 export default class TripService {
-  public getTripsByUser(user: User, loggedUser: User | null): Trip[] {
+  public getTripsByUser(user: User, loggedUser: User): Trip[] {
     if (loggedUser === null) {
       throw new UserNotLoggedInException();
     }
